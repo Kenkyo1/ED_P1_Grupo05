@@ -14,6 +14,7 @@ import ec.edu.espol.tools.DoublyCircularNodeList;
 import ec.edu.espol.tools.LinkedList;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -93,6 +94,14 @@ public class EditCarsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cars = new DoublyCircularLinkedList();
+        PrintCar pc = new PrintCar();
+        LinkedList<Car> allcars = pc.readCars();
+        Iterator<Car> it = allcars.iterator();
+        while(it.hasNext()){
+            Car c = it.next();
+            cars.addLast(c);
+        }
+        cursorCar = cars.getFirst();
         tip.getItems().addAll(TipoVehiculo.AUTOS, TipoVehiculo.ACUATICOS, TipoVehiculo.MOTOS, TipoVehiculo.PESADOS, TipoVehiculo.MAQUINARIAS, TipoVehiculo.OTROS);
         count = 0;
     }    
