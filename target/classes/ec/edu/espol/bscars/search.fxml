@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane prefHeight="334.0" prefWidth="578.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.bscars.SearchController">
+   <children>
+      <FontAwesomeIconView fx:id="asc" fill="RED" glyphName="ARROW_UP" layoutX="353.0" layoutY="37.0" onMouseClicked="#ascFilter" size="18" />
+      <FontAwesomeIconView fx:id="desc" fill="RED" glyphName="ARROW_DOWN" layoutX="387.0" layoutY="38.0" onMouseClicked="#descFilter" size="18" text="" />
+      <FontAwesomeIconView fill="RED" glyphName="ARROW_LEFT" layoutX="14.0" layoutY="27.0" onMouseClicked="#goBack" size="20" />
+      <ComboBox fx:id="filter" layoutX="418.0" layoutY="20.0" onAction="#filterBy" prefWidth="150.0" style="-fx-background-color: #FFF; -fx-border-color: #9e9e9e;" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="60.0" prefHeight="274.0" prefWidth="560.0" style="-fx-background-color: #fff;">
+         <content>
+            <FlowPane fx:id="show" prefHeight="345.0" prefWidth="576.0" style="-fx-background-color: #FFF;" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

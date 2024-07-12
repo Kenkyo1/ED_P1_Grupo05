@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="683.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.bscars.ShowCarController">
+   <children>
+      <FontAwesomeIconView fill="RED" glyphName="ARROW_LEFT" layoutX="14.0" layoutY="25.0" onMouseClicked="#goBack" size="20" text="" />
+      <HBox fx:id="all" layoutX="47.0" layoutY="102.0" prefHeight="83.0" prefWidth="232.0" style="-fx-border-width: 2px; -fx-border-color: #9e9e9e; -fx-border-radius: 5px;">
+         <children>
+            <ImageView fx:id="imv" fitHeight="160.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true" />
+         </children></HBox>
+      <FontAwesomeIconView fx:id="right" fill="RED" glyphName="PLAY" layoutX="217.0" layoutY="306.0" onMouseClicked="#buttonRight" size="30" />
+      <FontAwesomeIconView fx:id="left" fill="RED" glyphName="PLAY" layoutX="85.0" layoutY="307.0" onMouseClicked="#buttonLeft" rotate="180.0" size="30" />
+      <Label fx:id="tipo" layoutX="342.0" layoutY="57.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <Label fx:id="marca" layoutX="342.0" layoutY="90.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <Label fx:id="modelo" layoutX="342.0" layoutY="125.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <Label fx:id="kilometraje" layoutX="342.0" layoutY="166.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <Label fx:id="placa" layoutX="342.0" layoutY="207.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <Label fx:id="color" layoutX="342.0" layoutY="249.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <Label fx:id="precio" layoutX="342.0" layoutY="288.0" prefHeight="17.0" prefWidth="259.0" text="Label" />
+      <TextArea fx:id="desperfectos" layoutX="326.0" layoutY="329.0" prefHeight="94.0" prefWidth="328.0" style="-fx-background-color: transparent;" />
+      <Label fx:id="mantenimiento" layoutX="57.0" layoutY="359.0" prefHeight="17.0" prefWidth="204.0" text="Label" />
+      <CheckBox fx:id="fav" layoutX="584.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#editFav" text="Favoritos" />
+   </children>
+</AnchorPane>
